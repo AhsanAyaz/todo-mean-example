@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static(path.join(__dirname, '../client')));
 
+require('./db');
 require('./routes')(app);
 
 app.set('port', process.env.PORT || 3000);

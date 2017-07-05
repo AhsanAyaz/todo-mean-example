@@ -1,39 +1,100 @@
 'use strict';
 
-function index(req, res){
-    let todos = [{
-        title: 'Do Groceries',
-        done: true
-    },{
-        title: 'Do homework',
-        done: true
-    },{
-        title: 'Feed turtle',
-        done: false
-    },{
-        title: 'Drop brother to his friend\'s',
-        done: false
-    }];
+var Todo = require('./todos.model');
 
-    res.status(200).json(todos);
+
+function index(req, res){
+    Todo.find( {}, function(err, todos){
+        if(err){
+            res.status(500).json({
+                message: err.message
+            });
+        }
+        else{
+            res.status(200).json({
+                message: "Todos fetched successfully",
+                todos: todos
+            })
+        }
+    });
 }
 
-function hello(req, res){
-    res.send('Hello world');
+function update(req, res){
+
+    var todoId = req.params.id;
+
+    var updatedTodo = req.body;
+
+    Todo.findByIdAndUpdate( todoId, updatedTodo, {new: true}, function(err, savedTodo){
+        if(err){
+            res.status(500).json({
+                message: err.message
+            });
+        }
+        else{
+            res.status(200).json({
+                message: "Todo updated successfully",
+                todo: savedTodo
+            })
+        }
+    });
 }
 
 function create(req, res){
-    let newTodo = req.body;
+    var newTodo = req.body;
+    Todo.create( newTodo, function(err, savedTodo){
+        if(err){
+            res.status(500).json({
+                message: err.message
+            });
+        }
+        else{
+            res.status(200).json({
+                message: "Todo created successfully",
+                todo: savedTodo
+            })
+        }
+    });
+}
 
-    res.status(200).json({
-        result: 'success',
-        todo: newTodo
-    })
+function remove(req, res){
+    var todoId = req.params.id;
+    Todo.findByIdAndRemove( todoId, function(err){
+        if(err){
+            res.status(500).json({
+                message: err.message
+            });
+        }
+        else{
+            res.status(200).json({
+                message: "Todo deleted successfully"
+            })
+        }
+    });
+}
+
+function get(req, res){
+    var todoId = req.params.id;
+    Todo.findById( todoId, function(err, todo){
+        if(err){
+            res.status(500).json({
+                message: err.message
+            });
+        }
+        else{
+            res.status(200).json({
+                message: "Todo fetched successfully",
+                todo: todo
+            })
+        }
+    });
 }
 
 
 exports = module.exports = {
     index: index,
-    hello: hello,
-    create: create
+    create: create,
+    remove: remove,
+    update: update,
+    get: get
 }
