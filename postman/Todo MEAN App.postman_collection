@@ -1,0 +1,126 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Todo MEAN App",
+		"_postman_id": "a4ee1ec5-b158-1f31-f8de-66d58fdca40c",
+		"description": "Todo Mean Application. \nVideos: https://www.youtube.com/playlist?list=PL2sQdFoGnLIhPZnOyMP3aZL_QisKbulVv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Todos",
+			"request": {
+				"url": "http://localhost:3000/api/todos/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"url": "http://localhost:3000/api/todos/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test Todo 3\",\n    \"completed\": false\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"url": "http://localhost:3000/api/todos/595d5f27443ba5245e5a67fc",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"_id\": \"595d5f27443ba5245e5a67fc\",\n        \"name\": \"Test Todo 2\",\n        \"completed\": true,\n        \"description\": \"Sample description\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"url": "http://localhost:3000/api/todos/595d5ef9443ba5245e5a67fb",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todo By Id",
+			"request": {
+				"url": "http://localhost:3000/api/todos/595d5f27443ba5245e5a67fc",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
