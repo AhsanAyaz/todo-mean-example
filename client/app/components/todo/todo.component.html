@@ -2,8 +2,16 @@
     <h2 class="text-center">My Todos</h2>
 
     <div class="todo-list">
-        <todo-item todo="todoItem" ng-repeat="todoItem in $ctrl.todoList">
+        <div class="text-center" ng-show="$ctrl.todoList.length == 0">
+            No Todos To Show
+        </div>
+        <todo-item 
+            on-todo-update="$ctrl.onTodoUpdateHandler(todo)" 
+            on-todo-delete="$ctrl.onTodoDeleteHandler(todo)" 
+            todo="todoItem" 
+            ng-repeat="todoItem in $ctrl.todoList">
 
         </todo-item>
     </div>
+    <add-todo on-add-todo="$ctrl.onAddTodoHandler(todo)"></add-todo>
 </div>

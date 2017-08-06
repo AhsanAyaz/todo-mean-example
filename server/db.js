@@ -4,7 +4,9 @@ var mongoose = require('mongoose');
 var mongodbUrl = 'mongodb://localhost:27017/todo-mean';
 
 
-mongoose.connect(mongodbUrl, function(err){
+mongoose.connect(mongodbUrl,{
+    useMongoClient: true
+}, function(err){
     if(err){
         console.log("Error: Could not connect to mongodb");
         console.log(err);

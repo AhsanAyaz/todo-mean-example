@@ -1,4 +1,7 @@
 <div class="todo-item">
+    <div class="todo-status">
+        <input type="checkbox" ng-model="$ctrl.todo.completed" ng-change="$ctrl.onStatusChanged()">
+    </div>
     <div class="todo-name">{{$ctrl.todo.name}}</div>
-    <div class="todo-status">Status: {{$ctrl.todo.completed}}</div>
+    <button class="delete-btn btn btn-sm btn-danger" ng-click="$ctrl.deleteTodo()">x</button>
 </div>

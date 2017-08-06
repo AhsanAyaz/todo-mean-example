@@ -1,9 +1,28 @@
 .todo-item{
     padding: 6px 10px;
     border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 40px;
+}
+
+.todo-item .todo-status{
+    margin-right: 14px;
+}
+
+.todo-item .delete-btn{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    display: none;
 }
 
 .todo-item:hover{
     background: #333;
     color: white;
+}
+
+.todo-item:hover .delete-btn{
+    display: block;
 }
