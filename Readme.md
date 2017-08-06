@@ -10,6 +10,7 @@ This project was is used with the tutorial series available on Youtube
 - [MEAN Stack App Part 1 - Setting up the NodeJS Application & Introduction to Routes ](https://youtu.be/_AXXreicQu0)
 - [MEAN Stack App Part 2 - Setting up Mongoose and writing CRUD Calls ](https://youtu.be/Ge5UqmvnFsY)
 - [MEAN Stack App Part 3 - Creating the Angularjs app and displaying todos ](https://youtu.be/Q2K4eX6i7rE)
+- [MEAN Stack App Part 4 - Adding Todos, Removing Todos & Updating Todos ](https://youtu.be/afeMltSnePs)
 
 ## Getting Started
 
