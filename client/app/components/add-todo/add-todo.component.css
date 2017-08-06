@@ -1,0 +1,8 @@
+.add-todo-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.add-todo-container input{
+    flex: 1;
+}
