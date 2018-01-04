@@ -4,6 +4,8 @@ This project was is used with the tutorial series available on Youtube
 ## VIDEO SERIES
 [Mean Stack in Urdu](https://www.youtube.com/playlist?list=PL2sQdFoGnLIhPZnOyMP3aZL_QisKbulVv)
 
+## DEMO
+The app is live [here on Heroku](https://todo-mean-ex.herokuapp.com/) after Part 5 of the video series.
 
 ## VIDEOS
 
@@ -11,6 +13,7 @@ This project was is used with the tutorial series available on Youtube
 - [MEAN Stack App Part 2 - Setting up Mongoose and writing CRUD Calls ](https://youtu.be/Ge5UqmvnFsY)
 - [MEAN Stack App Part 3 - Creating the Angularjs app and displaying todos ](https://youtu.be/Q2K4eX6i7rE)
 - [MEAN Stack App Part 4 - Adding Todos, Removing Todos & Updating Todos ](https://youtu.be/afeMltSnePs)
+- [MEAN Stack App Part 5 - Using MLab for DB & Deploying app to Heroku](https://youtu.be/w8uCq5H0sb0)
 
 ## Getting Started
 
