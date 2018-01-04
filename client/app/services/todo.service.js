@@ -7,7 +7,7 @@
     .factory('TodoService', ['$http', TodoService]);
 
     function TodoService($http){
-        var apiBaseUrl = 'http://localhost:3000';
+        var apiBaseUrl = 'https://todo-mean-ex.herokuapp.com';
 
         function getTodos(){
             return $http.get(
